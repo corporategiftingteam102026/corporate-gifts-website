@@ -1,0 +1,38 @@
+[
+  {
+    "question": "Can gifts be customized with our company logo?",
+    "answer": "Yes, branding options are available for selected products.",
+    "displayOrder": 1,
+    "active": true
+  },
+  {
+    "question": "What is the minimum order quantity?",
+    "answer": "MOQ varies depending on the selected product.",
+    "displayOrder": 2,
+    "active": true
+  },
+  {
+    "question": "What is the minimum order quantity?",
+    "answer": "MOQ varies depending on the selected product.",
+    "displayOrder": 3,
+    "active": true
+  },
+  {
+    "question": "What is the minimum order quantity?",
+    "answer": "MOQ varies depending on the selected product.",
+    "displayOrder": 4,
+    "active": true
+  },
+  {
+    "question": "What is the minimum order quantity?",
+    "answer": "MOQ varies depending on the selected product.",
+    "displayOrder": 5,
+    "active": true
+  },
+  {
+    "question": "What is the minimum order quantity?",
+    "answer": "MOQ varies depending on the selected product.",
+    "displayOrder": 6,
+    "active": true
+  }
+]

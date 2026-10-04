@@ -1,0 +1,79 @@
+:root {
+  --brown: #6b351f;
+  --brown-2: #8a4828;
+  --dark: #321c14;
+  --peach: #e8b68f;
+  --cream: #fff4e8;
+  --warm-white: #fffcf8;
+  --beige: #f5e8da;
+  --gold: #b97842;
+  --text: #2b211d;
+  --muted: #74645b;
+  --line: #ead9c8;
+  --shadow: 0 18px 45px rgba(80, 44, 24, .13);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--warm-white);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+img { display: block; max-width: 100%; }
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 23px;
+  color: #fff;
+  background: linear-gradient(135deg, #6b351f, #9c512b);
+  border-radius: 12px;
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(107,53,31,.2);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.primary-button:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(107,53,31,.25); }
+
+.section-heading {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+.section-heading h2 {
+  margin: 9px 0 11px;
+  color: var(--dark);
+  font: 700 clamp(32px, 4vw, 44px)/1.08 Georgia, "Times New Roman", serif;
+}
+.section-heading p { margin: 0; color: var(--muted); line-height: 1.65; }
+.eyebrow {
+  color: #a45b2f;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2.1px;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Formal celebratory finish */
+body{background:#fffdf9;background-image:radial-gradient(circle at 12% 0,rgba(185,120,66,.055),transparent 22%)}
+.site-header{box-shadow:0 6px 24px rgba(64,36,22,.045)}
+.brand-mark{filter:drop-shadow(0 3px 7px rgba(173,99,46,.18))}
+.primary-button,.contact-button{border:1px solid rgba(255,255,255,.18);letter-spacing:.15px}
+.section-heading:before,.trending-heading:before{content:"✦  ◇  ✦";display:block;margin-bottom:10px;color:#b97842;font-size:11px;letter-spacing:8px}
+.footer{position:relative;overflow:hidden;background:linear-gradient(125deg,#28160f,#4d2719 62%,#63341f)}
+.footer:before{content:"✦";position:absolute;right:5%;top:18%;font-size:90px;color:rgba(232,182,143,.07)}

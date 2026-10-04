@@ -1,0 +1,78 @@
+.trending-section {
+  position: relative; overflow: hidden;
+  padding: 88px max(6vw,28px);
+  background:
+    radial-gradient(circle at 8% 20%,rgba(232,182,143,.24),transparent 22%),
+    radial-gradient(circle at 92% 80%,rgba(107,53,31,.08),transparent 20%),
+    #fbf2e9;
+}
+.trending-section::before, .trending-section::after { content: "✦"; position: absolute; color: rgba(173,99,46,.16); pointer-events: none; }
+.trending-section::before { left: 5%; top: 50px; font-size: 42px; }
+.trending-section::after { right: 6%; bottom: 42px; font-size: 55px; }
+.trending-heading { position: relative; z-index: 2; max-width: 720px; margin: 0 auto 42px; text-align: center; }
+.trending-eyebrow { color: #a45b2f; font-size: 10px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; }
+.trending-heading h2 { margin: 10px 0; color: var(--dark); font: 700 clamp(32px,4vw,44px) Georgia,serif; }
+.trending-heading p { margin: 0; color: var(--muted); line-height: 1.6; }
+
+.trending-carousel { position: relative; max-width: 1220px; margin: auto; }
+.trending-track {
+  display: flex; gap: 18px; overflow-x: auto; padding: 10px 5px 24px;
+  scrollbar-width: none; -ms-overflow-style: none;
+}
+.trending-track::-webkit-scrollbar { display: none; }
+.trending-card {
+  flex: 0 0 260px; overflow: hidden; background: rgba(255,255,255,.97);
+  border: 1px solid rgba(107,53,31,.1); border-radius: 17px;
+  box-shadow: 0 9px 24px rgba(76,45,27,.07);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.trending-card:hover { transform: translateY(-5px); box-shadow: 0 17px 35px rgba(76,45,27,.14); }
+.trending-image { position: relative; height: 190px; overflow: hidden; background: var(--cream); }
+.trending-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s ease; }
+.trending-card:hover img { transform: scale(1.04); }
+.trending-pill {
+  position: absolute; top: 11px; left: 11px; padding: 6px 10px;
+  color: #fff; background: linear-gradient(135deg,#71351f,#a55b30);
+  border-radius: 20px; font-size: 9px; font-weight: 800; letter-spacing: .4px;
+}
+.trending-card-content { padding: 17px; }
+.trending-card-content h3 { margin: 0 0 7px; color: var(--dark); font: 700 18px Georgia,serif; }
+.trending-card-content > p { min-height: 39px; margin: 0 0 15px; color: var(--muted); font-size: 12px; line-height: 1.55; }
+.trending-card-footer { padding-top: 12px; display: flex; align-items: flex-end; justify-content: space-between; border-top: 1px solid #f1e6dc; }
+.trending-card-footer small { display: block; margin-bottom: 3px; color: #927c70; font-size: 9px; }
+.trending-card-footer strong { color: var(--dark); font-size: 15px; }
+.product-view-arrow {
+  width: 32px; height: 32px; display: grid; place-items: center;
+  color: var(--brown); background: var(--cream); border-radius: 50%; transition: .18s ease;
+}
+.trending-card:hover .product-view-arrow { color: white; background: var(--brown); transform: translateX(2px); }
+
+.carousel-arrow {
+  position: absolute; z-index: 10; top: 48%; width: 47px; height: 47px;
+  display: grid; place-items: center; padding: 0;
+  color: var(--brown); background: rgba(255,252,248,.97);
+  border: 1px solid rgba(107,53,31,.17); border-radius: 50%;
+  box-shadow: 0 8px 24px rgba(59,33,24,.16);
+  font: 31px/1 Georgia,serif; cursor: pointer; transform: translateY(-50%);
+}
+.carousel-arrow:hover { color: white; background: var(--brown); }
+.carousel-arrow-left { left: -23px; }
+.carousel-arrow-right { right: -23px; }
+.carousel-hint { margin-top: 7px; display: flex; align-items: center; justify-content: center; gap: 12px; color: #967a69; font-size: 10px; text-transform: uppercase; letter-spacing: 1.3px; }
+.carousel-hint span { width: 38px; height: 1px; background: #d8b99e; }
+
+@media (max-width: 900px) {
+  .trending-section { padding: 72px 24px; }
+  .carousel-arrow-left { left: -10px; }
+  .carousel-arrow-right { right: -10px; }
+}
+@media (max-width: 560px) {
+  .trending-section { padding: 64px 16px; }
+  .trending-heading { margin-bottom: 30px; }
+  .trending-card { flex-basis: min(78vw,240px); }
+  .trending-image { height: 175px; }
+  .carousel-arrow { width: 40px; height: 40px; font-size: 27px; top: 46%; }
+  .carousel-arrow-left { left: -7px; }
+  .carousel-arrow-right { right: -7px; }
+  .carousel-hint { display: none; }
+}

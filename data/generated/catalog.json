@@ -1,0 +1,221 @@
+{
+  "categories": [
+    {
+      "slug": "welcome-kits0",
+      "name": "Welcome Kits0",
+      "description": "Thoughtfully curated kits for employees and teams",
+      "displayOrder": 1,
+      "active": true,
+      "image": "/generated/categories/welcome-kits0/cover.png"
+    },
+    {
+      "slug": "welcome-kits1",
+      "name": "Welcome Kits1",
+      "description": "Thoughtfully curated kits for employees and teams",
+      "displayOrder": 2,
+      "active": true,
+      "image": "/generated/categories/welcome-kits1/cover.png"
+    },
+    {
+      "slug": "welcome-kits2",
+      "name": "Welcome Kits2",
+      "description": "Thoughtfully curated kits for employees and teams",
+      "displayOrder": 3,
+      "active": true,
+      "image": "/generated/categories/welcome-kits2/cover.png"
+    },
+    {
+      "slug": "welcome-kits3",
+      "name": "Welcome Kits3",
+      "description": "Thoughtfully curated kits for employees and teams",
+      "displayOrder": 4,
+      "active": true,
+      "image": "/generated/categories/welcome-kits3/cover.png"
+    }
+  ],
+  "products": [
+    {
+      "slug": "executive-welcome-kit",
+      "name": "Executive Welcome Kit",
+      "categorySlug": "welcome-kits0",
+      "shortDescription": "Thoughtfully curated kits for employees and teams",
+      "description": "This product is best for welcome gifting. It contains the following products. Thoughtfully curated kits for employees and teams",
+      "startingPrice": 1000,
+      "moq": 1,
+      "featured": true,
+      "trending": true,
+      "displayOrder": 1,
+      "active": true,
+      "variants": [
+        {
+          "slug": "executive-welcome-kit--black",
+          "colorName": "Black",
+          "isDefault": true,
+          "active": true,
+          "images": [
+            "/generated/products/executive-welcome-kit/black/1.jpeg",
+            "/generated/products/executive-welcome-kit/black/2.jpeg"
+          ],
+          "colorHex": "#000000"
+        },
+        {
+          "slug": "executive-welcome-kit--blue",
+          "colorName": "Blue",
+          "isDefault": false,
+          "active": true,
+          "images": [
+            "/generated/products/executive-welcome-kit/blue/1.jpeg",
+            "/generated/products/executive-welcome-kit/blue/2.jpeg"
+          ],
+          "colorHex": "#000080"
+        }
+      ],
+      "image": "/generated/products/executive-welcome-kit/black/1.jpeg"
+    },
+    {
+      "slug": "special-welcome-kit",
+      "name": "Special Welcome Kit",
+      "categorySlug": "welcome-kits0",
+      "shortDescription": "Thoughtfully curated kits for employees and teams",
+      "description": "This product is best for welcome gifting. It contains the following products. Thoughtfully curated kits for employees and teams",
+      "startingPrice": 1000,
+      "moq": 1,
+      "featured": true,
+      "trending": true,
+      "displayOrder": 2,
+      "active": true,
+      "variants": [
+        {
+          "slug": "special-welcome-kit--black",
+          "colorName": "Black",
+          "isDefault": true,
+          "active": true,
+          "images": [
+            "/generated/products/special-welcome-kit/black/1.jpeg",
+            "/generated/products/special-welcome-kit/black/2.jpeg"
+          ],
+          "colorHex": "#000000"
+        },
+        {
+          "slug": "special-welcome-kit--blue",
+          "colorName": "Blue",
+          "isDefault": false,
+          "active": true,
+          "images": [
+            "/generated/products/special-welcome-kit/blue/1.jpeg",
+            "/generated/products/special-welcome-kit/blue/2.jpeg"
+          ],
+          "colorHex": "#000080"
+        }
+      ],
+      "image": "/generated/products/special-welcome-kit/black/1.jpeg"
+    },
+    {
+      "slug": "special-welcome-kit2",
+      "name": "Special Welcome Kit2",
+      "categorySlug": "welcome-kits1",
+      "shortDescription": "Thoughtfully curated kits for employees and teams",
+      "description": "This product is best for welcome gifting. It contains the following products. Thoughtfully curated kits for employees and teams",
+      "startingPrice": 1000,
+      "moq": 1,
+      "featured": true,
+      "trending": true,
+      "displayOrder": 3,
+      "active": true,
+      "variants": [
+        {
+          "slug": "special-welcome-kit2--black",
+          "colorName": "Black",
+          "isDefault": true,
+          "active": true,
+          "images": [
+            "/generated/products/special-welcome-kit2/black/1.jpeg",
+            "/generated/products/special-welcome-kit2/black/2.jpeg"
+          ],
+          "colorHex": "#000000"
+        }
+      ],
+      "image": "/generated/products/special-welcome-kit2/black/1.jpeg"
+    },
+    {
+      "slug": "special-welcome-kit3",
+      "name": "Special Welcome Kit3",
+      "categorySlug": "welcome-kits1",
+      "shortDescription": "Thoughtfully curated kits for employees and teams",
+      "description": "This product is best for welcome gifting. It contains the following products. Thoughtfully curated kits for employees and teams",
+      "startingPrice": 1000,
+      "moq": 1,
+      "featured": true,
+      "trending": true,
+      "displayOrder": 4,
+      "active": true,
+      "variants": [
+        {
+          "slug": "special-welcome-kit3--black",
+          "colorName": "Black",
+          "isDefault": true,
+          "active": true,
+          "images": [
+            "/generated/products/special-welcome-kit3/black/1.jpeg",
+            "/generated/products/special-welcome-kit3/black/2.jpeg"
+          ],
+          "colorHex": "#000000"
+        }
+      ],
+      "image": "/generated/products/special-welcome-kit3/black/1.jpeg"
+    },
+    {
+      "slug": "special-welcome-kit4",
+      "name": "Special Welcome Kit4",
+      "categorySlug": "welcome-kits2",
+      "shortDescription": "Thoughtfully curated kits for employees and teams",
+      "description": "This product is best for welcome gifting. It contains the following products. Thoughtfully curated kits for employees and teams",
+      "startingPrice": 1000,
+      "moq": 1,
+      "featured": true,
+      "trending": true,
+      "displayOrder": 5,
+      "active": true,
+      "variants": [
+        {
+          "slug": "special-welcome-kit4--black",
+          "colorName": "Black",
+          "isDefault": true,
+          "active": true,
+          "images": [
+            "/generated/products/special-welcome-kit4/black/1.jpeg",
+            "/generated/products/special-welcome-kit4/black/2.jpeg"
+          ],
+          "colorHex": "#000000"
+        }
+      ],
+      "image": "/generated/products/special-welcome-kit4/black/1.jpeg"
+    },
+    {
+      "slug": "special-welcome-kit5",
+      "name": "Special Welcome Kit5",
+      "categorySlug": "welcome-kits3",
+      "shortDescription": "Thoughtfully curated kits for employees and teams",
+      "description": "This product is best for welcome gifting. It contains the following products. Thoughtfully curated kits for employees and teams",
+      "startingPrice": 1000,
+      "moq": 1,
+      "featured": true,
+      "trending": true,
+      "displayOrder": 6,
+      "active": true,
+      "variants": [
+        {
+          "slug": "special-welcome-kit5--black",
+          "colorName": "Black",
+          "isDefault": true,
+          "active": true,
+          "images": [
+            "/generated/products/special-welcome-kit5/black/1.jpeg"
+          ],
+          "colorHex": "#000000"
+        }
+      ],
+      "image": "/generated/products/special-welcome-kit5/black/1.jpeg"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+.contact-header {
+  position: relative;
+  overflow: hidden;
+  padding: 92px 28px 86px;
+  background:
+    radial-gradient(circle at 88% 24%, rgba(232, 182, 143, .34), transparent 24%),
+    radial-gradient(circle at 8% 85%, rgba(107, 53, 31, .08), transparent 22%),
+    linear-gradient(120deg, #fffaf3 0%, #fff0e0 62%, #f4dbc4 100%);
+  border-bottom: 1px solid rgba(107, 53, 31, .08);
+}
+
+.contact-header-shell {
+  position: relative;
+  z-index: 2;
+  width: min(900px, 100%);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-header-eyebrow {
+  color: #a45b2f;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+}
+
+.contact-header h1 {
+  margin: 13px 0 18px;
+  color: var(--dark, #321c14);
+  font: 700 clamp(43px, 5.4vw, 66px)/1.02 Georgia, "Times New Roman", serif;
+  letter-spacing: -1.7px;
+}
+
+.contact-header p {
+  max-width: 690px;
+  margin: 0 auto;
+  color: #67554b;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.contact-header-star {
+  position: absolute;
+  color: rgba(164, 91, 47, .15);
+  pointer-events: none;
+}
+
+.star-one {
+  top: 42px;
+  right: 10%;
+  font-size: 70px;
+}
+
+.star-two {
+  left: 9%;
+  bottom: -26px;
+  font-size: 110px;
+  transform: rotate(20deg);
+}
+
+@media (max-width: 700px) {
+  .contact-header {
+    padding: 68px 18px 64px;
+  }
+
+  .contact-header h1 {
+    font-size: clamp(39px, 12vw, 53px);
+    letter-spacing: -1px;
+  }
+
+  .contact-header p {
+    font-size: 14px;
+  }
+
+  .star-one {
+    right: 3%;
+    font-size: 45px;
+  }
+
+  .star-two {
+    display: none;
+  }
+}

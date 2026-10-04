@@ -1,0 +1,55 @@
+.contact-success {
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 58px 34px;
+  text-align: center;
+  background: #fff9f2;
+  border: 1px solid #e7d5c5;
+  border-radius: 18px;
+}
+
+.contact-success-icon {
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 18px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: var(--brown, #6b351f);
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.contact-success > span {
+  color: #a45b2f;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  text-transform: uppercase;
+}
+
+.contact-success h2 {
+  margin: 8px 0 12px;
+  color: var(--dark, #321c14);
+  font: 700 36px Georgia, serif;
+}
+
+.contact-success p {
+  max-width: 500px;
+  margin: 0 auto;
+  color: var(--muted, #74645b);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.contact-success button {
+  margin-top: 23px;
+  padding: 11px 17px;
+  color: var(--brown, #6b351f);
+  background: #fff;
+  border: 1px solid #d8bba6;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 800;
+}

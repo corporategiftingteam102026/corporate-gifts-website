@@ -1,0 +1,295 @@
+.about-page {
+    overflow: hidden;
+    background: var(--warm-white);
+  }
+  
+  .about-hero {
+    position: relative;
+  
+    min-height: 430px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    padding: 105px 28px 90px;
+  
+    overflow: hidden;
+  
+    background:
+      radial-gradient(
+        circle at 15% 20%,
+        rgba(232, 182, 143, 0.28),
+        transparent 30%
+      ),
+      radial-gradient(
+        circle at 88% 72%,
+        rgba(185, 120, 66, 0.12),
+        transparent 27%
+      ),
+      linear-gradient(
+        145deg,
+        var(--cream),
+        var(--warm-white)
+      );
+  
+    border-bottom: 1px solid var(--line);
+  }
+  
+  .about-hero-inner {
+    position: relative;
+    z-index: 2;
+  
+    max-width: 790px;
+    margin: 0 auto;
+  
+    text-align: center;
+  }
+  
+  .about-hero h1 {
+    margin: 12px 0 20px;
+  
+    color: var(--dark);
+  
+    font-family:
+      Georgia,
+      "Times New Roman",
+      serif;
+  
+    font-size:
+      clamp(42px, 6vw, 74px);
+  
+    font-weight: 500;
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+  }
+  
+  .about-hero p {
+    max-width: 620px;
+    margin: 0 auto;
+  
+    color: var(--muted);
+  
+    font-size: 16px;
+    line-height: 1.75;
+  }
+  
+  .about-hero-decoration {
+    position: absolute;
+  
+    color: rgba(185, 120, 66, 0.3);
+  
+    font-family: Georgia, serif;
+    font-size: 84px;
+  
+    pointer-events: none;
+  }
+  
+  .about-decoration-left {
+    left: 7%;
+    top: 22%;
+  }
+  
+  .about-decoration-right {
+    right: 8%;
+    bottom: 14%;
+  
+    font-size: 55px;
+  }
+  
+  .about-story {
+    max-width: 1050px;
+  
+    margin: 0 auto;
+  
+    padding: 105px 28px 115px;
+  
+    display: grid;
+  
+    grid-template-columns:
+      minmax(170px, 0.65fr)
+      minmax(0, 2fr);
+  
+    gap: 80px;
+  }
+  
+  .about-story-label {
+    padding-top: 8px;
+  }
+  
+  .about-story-mark {
+    margin-top: 25px;
+  
+    color: var(--peach);
+  
+    font-family: Georgia, serif;
+    font-size: 54px;
+  }
+  
+  .about-copy {
+    position: relative;
+  }
+  
+  .about-copy::before {
+    content: "";
+  
+    position: absolute;
+  
+    left: -36px;
+    top: 4px;
+    bottom: 4px;
+  
+    width: 1px;
+  
+    background:
+      linear-gradient(
+        to bottom,
+        transparent,
+        var(--peach) 12%,
+        var(--peach) 88%,
+        transparent
+      );
+  }
+  
+  .about-copy p {
+    margin: 0 0 28px;
+  
+    color: var(--text);
+  
+    font-family:
+      Georgia,
+      "Times New Roman",
+      serif;
+  
+    font-size:
+      clamp(19px, 2vw, 24px);
+  
+    font-weight: 400;
+    line-height: 1.72;
+  }
+  
+  .about-copy p:first-child::first-letter {
+    color: var(--brown);
+  
+    font-size: 1.45em;
+  }
+  
+  .about-copy p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .about-closing {
+    padding: 0 28px 110px;
+  }
+  
+  .about-closing-inner {
+    max-width: 1050px;
+  
+    margin: 0 auto;
+  
+    padding: 72px 40px;
+  
+    text-align: center;
+  
+    background:
+      linear-gradient(
+        145deg,
+        var(--brown),
+        var(--dark)
+      );
+  
+    border-radius: 26px;
+  
+    box-shadow: var(--shadow);
+  }
+  
+  .about-closing-inner > span {
+    display: block;
+  
+    margin-bottom: 17px;
+  
+    color: var(--peach);
+  
+    font-size: 27px;
+  }
+  
+  .about-closing h2 {
+    max-width: 650px;
+  
+    margin: 0 auto 17px;
+  
+    color: #fff;
+  
+    font-family:
+      Georgia,
+      "Times New Roman",
+      serif;
+  
+    font-size:
+      clamp(30px, 4vw, 46px);
+  
+    font-weight: 500;
+    line-height: 1.12;
+  }
+  
+  .about-closing p {
+    max-width: 600px;
+  
+    margin: 0 auto 30px;
+  
+    color: rgba(255, 255, 255, 0.76);
+  
+    line-height: 1.7;
+  }
+  
+  .about-closing .primary-button {
+    background: var(--cream);
+    color: var(--brown);
+  }
+  
+  @media (max-width: 760px) {
+    .about-hero {
+      min-height: 380px;
+  
+      padding:
+        90px 20px 72px;
+    }
+  
+    .about-hero-decoration {
+      opacity: 0.55;
+    }
+  
+    .about-story {
+      padding:
+        75px 20px 82px;
+  
+      grid-template-columns: 1fr;
+  
+      gap: 28px;
+    }
+  
+    .about-story-mark {
+      display: none;
+    }
+  
+    .about-copy::before {
+      display: none;
+    }
+  
+    .about-copy p {
+      font-size: 18px;
+      line-height: 1.72;
+    }
+  
+    .about-closing {
+      padding:
+        0 18px 80px;
+    }
+  
+    .about-closing-inner {
+      padding:
+        55px 24px;
+  
+      border-radius: 20px;
+    }
+  }

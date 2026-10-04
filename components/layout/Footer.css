@@ -1,0 +1,19 @@
+.footer { position: relative; overflow: hidden; padding: 58px max(6vw,28px) 25px; color: #fff; background: linear-gradient(115deg,#29160f,#5b2d1b); }
+.footer::after { content: "✦"; position: absolute; right: 6%; top: 28px; color: rgba(242,183,125,.14); font-size: 90px; }
+.footer-grid { position: relative; z-index: 2; max-width: 1220px; margin: auto; display: grid; grid-template-columns: 1.5fr .8fr 1.1fr 1fr; gap: 50px; }
+.footer h3 { margin: 0 0 14px; color: #f6c99e; font-size: 13px; text-transform: uppercase; letter-spacing: .8px; }
+.footer a, .footer p { display: block; margin: 5px 0; color: #f3e6dc; font-size: 12px; line-height: 1.7; }
+.footer a:hover { color: #fff; }
+.footer-about p { max-width: 340px; }
+.footer-brand { margin-bottom: 14px; color: #f2b77d; font: 700 25px Georgia,serif; }
+.copyright { max-width: 1220px; margin: 35px auto 0; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.13); color: #cbb8ac; font-size: 10px; }
+
+@media (max-width: 760px) {
+  .footer { padding: 48px 20px 23px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+  .footer-about { grid-column: 1 / -1; }
+}
+@media (max-width: 420px) {
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-about { grid-column: auto; }
+}

@@ -1,0 +1,4 @@
+.product-page {
+  min-height: 100vh;
+  background: var(--warm-white, #fffcf8);
+}

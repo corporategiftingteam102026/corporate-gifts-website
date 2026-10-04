@@ -1,0 +1,78 @@
+{
+  "categories": [
+    {
+      "slug": "welcome-kits",
+      "name": "Welcome Kits",
+      "description": "Thoughtfully curated onboarding gifts that help new employees feel welcomed, valued and connected from day one.",
+      "displayOrder": 1,
+      "active": true,
+      "image": "/images/mock/welcome-kit.svg"
+    }
+  ],
+  "products": [
+    {
+      "slug": "executive-welcome-kit",
+      "name": "Executive Welcome Kit",
+      "categorySlug": "welcome-kits",
+      "shortDescription": "A refined onboarding set for employees and leadership teams.",
+      "description": "A premium corporate welcome kit curated for memorable onboarding.",
+      "startingPrice": 1499,
+      "moq": 10,
+      "featured": true,
+      "trending": true,
+      "displayOrder": 1,
+      "active": true,
+      "image": "/images/mock/welcome-kit.svg",
+      "variants": [
+        {
+          "slug": "executive-welcome-kit--black",
+          "colorName": "Black",
+          "colorHex": "#252525",
+          "priceOverride": 1499,
+          "isDefault": true,
+          "active": true,
+          "images": [
+            "/images/mock/welcome-kit.svg"
+          ]
+        },
+        {
+          "slug": "executive-welcome-kit--brown",
+          "colorName": "Brown",
+          "colorHex": "#7b4b32",
+          "priceOverride": 1599,
+          "isDefault": false,
+          "active": true,
+          "images": [
+            "/images/mock/gift-hamper.svg"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "essential-welcome-box",
+      "name": "Essential Welcome Box",
+      "categorySlug": "welcome-kits",
+      "shortDescription": "A practical, polished kit for growing teams and bulk onboarding.",
+      "description": "Useful essentials presented in a clean corporate gift box.",
+      "startingPrice": 899,
+      "moq": 20,
+      "featured": false,
+      "trending": false,
+      "displayOrder": 2,
+      "active": true,
+      "image": "/images/mock/welcome-kit.svg",
+      "variants": [
+        {
+          "slug": "essential-welcome-box--navy",
+          "colorName": "Navy",
+          "colorHex": "#25364a",
+          "isDefault": true,
+          "active": true,
+          "images": [
+            "/images/mock/welcome-kit.svg"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+.business-contact-heading {
+  max-width: 700px;
+  margin-bottom: 30px;
+}
+
+.business-contact-heading > span {
+  color: #a45b2f;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.9px;
+  text-transform: uppercase;
+}
+
+.business-contact-heading h2 {
+  margin: 9px 0 12px;
+  color: var(--dark, #321c14);
+  font: 700 clamp(30px, 3.5vw, 42px)/1.08 Georgia, serif;
+}
+
+.business-contact-heading p {
+  max-width: 650px;
+  margin: 0;
+  color: var(--muted, #74645b);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.business-contact-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.business-contact-card {
+  min-width: 0;
+  min-height: 190px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  background: #fff9f3;
+  border: 1px solid #ead9ca;
+  border-radius: 16px;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+a.business-contact-card:hover {
+  transform: translateY(-4px);
+  border-color: #d8b99f;
+  box-shadow: 0 16px 32px rgba(76, 45, 27, .09);
+}
+
+.business-contact-icon {
+  width: 39px;
+  height: 39px;
+  margin-bottom: 25px;
+  display: grid;
+  place-items: center;
+  color: var(--brown, #6b351f);
+  background: #f4dfcd;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.business-contact-card > span {
+  margin-bottom: 6px;
+  color: #9a7e6e;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+
+.business-contact-card > strong {
+  overflow-wrap: anywhere;
+  color: var(--dark, #321c14);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.business-contact-card > small {
+  margin-top: auto;
+  padding-top: 20px;
+  color: #9a6b50;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.business-social-links {
+  margin-top: 17px;
+  padding: 15px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: #fff;
+  border: 1px solid #eee2d8;
+  border-radius: 12px;
+}
+
+.business-social-links > span {
+  color: #88736a;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.business-social-links > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.business-social-links a {
+  color: var(--brown, #6b351f);
+  font-size: 10px;
+  font-weight: 800;
+}
+
+@media (max-width: 950px) {
+  .business-contact-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .business-contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .business-contact-card {
+    min-height: 160px;
+  }
+
+  .business-social-links {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
