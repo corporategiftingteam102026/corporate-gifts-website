@@ -10,6 +10,8 @@ import {
   getProductsByCategory,
 } from "@/lib/catalog";
 import "./category-page.css";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
@@ -42,6 +44,7 @@ export default async function CategoryPage({
 
   return (
     <main className="category-page">
+      <Navbar />
       <CategoryHeader category={category} />
 
       <section className="category-products-section">
@@ -70,6 +73,7 @@ export default async function CategoryPage({
       <section className="category-discover-section">
         <Categories />
       </section>
+      <Footer />
     </main>
   );
 }
