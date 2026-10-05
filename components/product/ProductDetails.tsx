@@ -1,3 +1,5 @@
+
+
 "use client";
 
 import { useMemo, useState } from "react";
@@ -20,7 +22,9 @@ type Props = {
 export default function ProductDetails({ product, category }: Props) {
   const defaultVariant = useMemo<CatalogVariant | undefined>(
     () =>
-      product.variants.find((variant) => variant.active && variant.isDefault) ??
+      product.variants.find(
+        (variant) => variant.active && variant.isDefault
+      ) ??
       product.variants.find((variant) => variant.active),
     [product.variants]
   );
@@ -31,7 +35,8 @@ export default function ProductDetails({ product, category }: Props) {
 
   const selectedVariant =
     product.variants.find(
-      (variant) => variant.active && variant.slug === selectedVariantSlug
+      (variant) =>
+        variant.active && variant.slug === selectedVariantSlug
     ) ?? defaultVariant;
 
   const galleryImages =
@@ -44,24 +49,39 @@ export default function ProductDetails({ product, category }: Props) {
   const price =
     selectedVariant?.priceOverride ?? product.startingPrice;
 
+  const quoteHref =
+    `/contact/?product=${encodeURIComponent(product.name)}` +
+    `&variant=${encodeURIComponent(
+      selectedVariant?.colorName ?? ""
+    )}`;
+
   return (
     <section className="product-detail-section">
       <div className="product-detail-shell">
-        <nav className="product-breadcrumb" aria-label="Breadcrumb">
+        <nav
+          className="product-breadcrumb"
+          aria-label="Breadcrumb"
+        >
           <Link href="/">Home</Link>
+
           <span>/</span>
+
           <Link href="/#products">Products</Link>
 
           {category && (
             <>
               <span>/</span>
-              <Link href={`/products/category/${category.slug}/`}>
+
+              <Link
+                href={`/products/category/${category.slug}/`}
+              >
                 {category.name}
               </Link>
             </>
           )}
 
           <span>/</span>
+
           <span>{product.name}</span>
         </nav>
 
@@ -92,17 +112,33 @@ export default function ProductDetails({ product, category }: Props) {
 
             <div className="product-price-block">
               <span>Starting from</span>
+
               <div className="product-price">
-                <strong>{price !== undefined ? `₹${price.toLocaleString("en-IN")}` : "Price on request"}</strong>
-                {price !== undefined && <small>per unit*</small>}
+                <strong>
+                  {price !== undefined
+                    ? `₹${price.toLocaleString("en-IN")}`
+                    : "Price on request"}
+                </strong>
+
+                {price !== undefined && (
+                  <small>per unit*</small>
+                )}
               </div>
-              <p>*Final pricing may vary by quantity, customization and selected variant.</p>
+
+              <p>
+                *Final pricing may vary by quantity,
+                customization and selected variant.
+              </p>
             </div>
 
-            {product.variants.some((variant) => variant.active) && (
+            {product.variants.some(
+              (variant) => variant.active
+            ) && (
               <VariantSelector
                 variants={product.variants}
-                selectedVariantSlug={selectedVariant?.slug ?? ""}
+                selectedVariantSlug={
+                  selectedVariant?.slug ?? ""
+                }
                 onSelect={setSelectedVariantSlug}
               />
             )}
@@ -126,18 +162,17 @@ export default function ProductDetails({ product, category }: Props) {
               </div>
             </div>
 
-            <a
+            <Link
               className="product-quote-button"
-              href={`/contact/?product=${encodeURIComponent(product.name)}&variant=${encodeURIComponent(
-                selectedVariant?.colorName ?? ""
-              )}`}
+              href={quoteHref}
             >
-              <span>Request a Quote</span>
+              <span>Contact us</span>
               <span aria-hidden="true">→</span>
-            </a>
+            </Link>
 
             <p className="quote-helper">
-              Tell us your quantity, branding requirements and delivery timeline.
+              Tell us your quantity, branding requirements
+              and delivery timeline.
             </p>
           </div>
         </div>

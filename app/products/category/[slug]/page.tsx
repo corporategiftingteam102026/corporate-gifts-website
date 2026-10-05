@@ -1,6 +1,9 @@
+
+
 import { notFound } from "next/navigation";
 import CategoryHeader from "@/components/category/CategoryHeader";
 import CategoryProductGrid from "@/components/category/CategoryProductGrid";
+import Categories from "@/components/home/Categories";
 import {
   getActiveCategories,
   getCategoryBySlug,
@@ -24,8 +27,11 @@ export function generateStaticParams() {
   }));
 }
 
-export default async function CategoryPage({ params }: PageProps) {
+export default async function CategoryPage({
+  params,
+}: PageProps) {
   const { slug } = await params;
+
   const category = getCategoryBySlug(slug);
 
   if (!category) {
@@ -42,17 +48,27 @@ export default async function CategoryPage({ params }: PageProps) {
         <div className="category-products-shell">
           <div className="category-products-toolbar">
             <div>
-              <span className="category-products-kicker">Our collection</span>
+              <span className="category-products-kicker">
+                Our collection
+              </span>
+
               <h2>Explore {category.name}</h2>
             </div>
 
             <p>
-              {products.length} {products.length === 1 ? "product" : "products"}
+              {products.length}{" "}
+              {products.length === 1
+                ? "product"
+                : "products"}
             </p>
           </div>
 
           <CategoryProductGrid products={products} />
         </div>
+      </section>
+
+      <section className="category-discover-section">
+        <Categories />
       </section>
     </main>
   );

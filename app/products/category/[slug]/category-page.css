@@ -1,10 +1,16 @@
+
+
 .category-page {
   min-height: 100vh;
   background: var(--warm-white, #fffcf8);
 }
 
+/* =========================================================
+   PRODUCTS SECTION
+========================================================= */
+
 .category-products-section {
-  padding: 76px 28px 96px;
+  padding: 76px 28px 88px;
 }
 
 .category-products-shell {
@@ -14,43 +20,150 @@
 
 .category-products-toolbar {
   margin-bottom: 28px;
+
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+
   gap: 24px;
 }
 
 .category-products-kicker {
   color: #a45b2f;
+
   font-size: 10px;
   font-weight: 800;
   letter-spacing: 2px;
+
   text-transform: uppercase;
 }
 
 .category-products-toolbar h2 {
   margin: 8px 0 0;
+
   color: var(--dark, #321c14);
-  font: 700 clamp(28px, 3vw, 38px)/1.1 Georgia, "Times New Roman", serif;
+
+  font:
+    700 clamp(28px, 3vw, 38px) / 1.1
+    Georgia,
+    "Times New Roman",
+    serif;
 }
 
 .category-products-toolbar > p {
   flex: 0 0 auto;
+
   margin: 0;
+
   color: var(--muted, #74645b);
+
   font-size: 12px;
   font-weight: 700;
 }
 
+
+/* =========================================================
+   COLLECTIONS / CATEGORIES CONTINUATION
+========================================================= */
+
+.category-discover-section {
+  position: relative;
+
+  width: 100%;
+
+  border-top: 1px solid rgba(107, 53, 31, 0.08);
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff9f2 0%,
+      var(--warm-white, #fffcf8) 100%
+    );
+}
+
+/*
+  Categories.tsx already contains its own
+  .categories-section container.
+
+  We only adjust its vertical spacing here
+  when it appears on the category page.
+*/
+
+.category-discover-section .categories-section {
+  padding-top: 78px;
+  padding-bottom: 92px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .category-products-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .category-discover-section .categories-section {
+    padding-top: 68px;
+    padding-bottom: 78px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 640px) {
   .category-products-section {
-    padding: 54px 16px 72px;
+    padding: 54px 16px 64px;
   }
 
   .category-products-toolbar {
     align-items: flex-start;
     flex-direction: column;
+
     gap: 8px;
+
     margin-bottom: 22px;
+  }
+
+  .category-products-toolbar h2 {
+    font-size: 28px;
+  }
+
+  .category-discover-section .categories-section {
+    padding-top: 58px;
+    padding-bottom: 68px;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+  .category-products-section {
+    padding: 48px 12px 58px;
+  }
+
+  .category-products-toolbar {
+    margin-bottom: 20px;
+  }
+
+  .category-products-toolbar h2 {
+    font-size: 26px;
+  }
+
+  .category-products-toolbar > p {
+    font-size: 11px;
+  }
+
+  .category-discover-section .categories-section {
+    padding-top: 52px;
+    padding-bottom: 60px;
   }
 }
