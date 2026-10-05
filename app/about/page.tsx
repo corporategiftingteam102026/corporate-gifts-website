@@ -1,6 +1,7 @@
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import { getAboutParagraphs } from "@/lib/about";
+import Link from "next/link";
 
 import "@/app/about/about-page.css"
 
@@ -88,12 +89,15 @@ export default function AboutPage() {
               gifting leaves a lasting impression.
             </p>
 
-            <a
+            {/* <a
               href="/contact/"
               className="primary-button"
             >
               Plan Your Gifting
-            </a>
+            </a> */}
+            <Link href="/contact/" className="primary-button">
+            Plan Your Gifting
+            </Link>
           </div>
         </section>
       </main>
