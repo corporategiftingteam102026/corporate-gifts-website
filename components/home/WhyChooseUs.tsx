@@ -1,4 +1,5 @@
 import "@/components/home/WhyChooseUs.css";
+import Link from "next/link";
 
 const reasons = [
   ["◇", "Premium Quality", "Carefully curated products you can trust."],
@@ -29,10 +30,14 @@ export default function WhyChooseUs() {
             strengthen relationships and create lasting memories.
           </p>
 
-          <a href="#contact" className="why-button">
+          {/* <a href="#contact" className="why-button">
             Start Gifting
             <span>→</span>
-          </a>
+          </a> */}
+          <Link href="/contact/" className="why-button">
+          Start Gifting
+          <span>→</span>
+          </Link>
         </div>
 
         <div className="why-reasons">
