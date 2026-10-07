@@ -140,7 +140,7 @@
 }
 
 .cardContent {
-  min-height: 132px;
+  /* min-height: 132px; */
   padding: 18px 17px 20px;
   text-align: center;
 }
