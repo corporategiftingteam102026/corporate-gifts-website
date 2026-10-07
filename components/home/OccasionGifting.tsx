@@ -74,7 +74,7 @@ export default function OccasionGifting() {
 
               <div className={styles.cardContent}>
                 <h3>{occasion.title}</h3>
-                <p>{occasion.copy}</p>
+                {/* <p>{occasion.copy}</p> */}
               </div>
             </article>
           ))}
