@@ -1,19 +1,48 @@
 import "@/components/home/WhyChooseUs.css";
 import Link from "next/link";
 
+const basePath =
+  process.env.NODE_ENV === "production"
+    ? "/corporate-gifts-website"
+    : "";
+
 const reasons = [
-  ["◇", "Premium Quality", "Carefully curated products you can trust."],
-  ["✦", "Perfect for Every Occasion", "From onboarding to festive gifting."],
-  ["◎", "Customizable Solutions", "Add your brand touch to every gift."],
-  ["✓", "Reliable Service", "Clear coordination for corporate orders."],
-  ["♧", "Sustainable Choices", "Thoughtful options for a better tomorrow."],
+  {
+    image: "/images/premium-quality.png",
+    title: "Premium Quality",
+    copy: "Carefully curated products you can trust.",
+  },
+  {
+    image: "/images/every-occasion.png",
+    title: "Perfect for Every Occasion",
+    copy: "From onboarding to festive gifting.",
+  },
+  {
+    image: "/images/customizable-solutions.png",
+    title: "Customizable Solutions",
+    copy: "Add your brand touch to every gift.",
+  },
+  {
+    image: "/images/reliable-service.png",
+    title: "Reliable Service",
+    copy: "Clear coordination for corporate orders.",
+  },
+  {
+    image: "/images/sustainable-choices.png",
+    title: "Sustainable Choices",
+    copy: "Thoughtful options for a better tomorrow.",
+  },
 ];
 
 export default function WhyChooseUs() {
   return (
     <section className="why-section" id="about">
-      <span className="why-decoration why-decoration-one">✦</span>
-      <span className="why-decoration why-decoration-two">◇</span>
+      <span className="why-decoration why-decoration-one" aria-hidden="true">
+        ✦
+      </span>
+      <span className="why-decoration why-decoration-two" aria-hidden="true">
+        ◇
+      </span>
 
       <div className="why-container">
         <div className="why-intro">
@@ -30,35 +59,38 @@ export default function WhyChooseUs() {
             strengthen relationships and create lasting memories.
           </p>
 
-          {/* <a href="#contact" className="why-button">
+          <Link href="/contact/" className="why-button">
             Start Gifting
             <span>→</span>
-          </a> */}
-          <Link href="/contact/" className="why-button">
-          Start Gifting
-          <span>→</span>
           </Link>
         </div>
 
         <div className="why-reasons">
-          {reasons.map(([icon, title, copy], index) => (
-            <div
+          {reasons.map((reason, index) => (
+            <article
               className={`reason-card reason-card-${index + 1}`}
-              key={title}
+              key={reason.title}
             >
               <span className="reason-number">
                 {String(index + 1).padStart(2, "0")}
               </span>
 
-              <div className="reason-icon">{icon}</div>
-
-              <div className="reason-content">
-                <h3>{title}</h3>
-                <p>{copy}</p>
+              <div className="reason-visual" aria-hidden="true">
+                <span className="reason-image-halo" />
+                <img
+                  src={`${basePath}${reason.image}`}
+                  alt=""
+                  className="reason-image-img"
+                />
               </div>
 
-              <span className="reason-sparkle">✦</span>
-            </div>
+              <div className="reason-content">
+                <h3>{reason.title}</h3>
+                <p>{reason.copy}</p>
+              </div>
+
+              <span className="reason-accent" aria-hidden="true" />
+            </article>
           ))}
         </div>
       </div>
