@@ -31,13 +31,10 @@ const imageExt = /\.(jpe?g|png|webp)$/i;
  * GitHub Pages:
  * /corporate-gifts-website/generated/products/...
  */
-const publicBasePath =
-  process.env.GITHUB_ACTIONS === "true"
-    ? "/corporate-gifts-website"
-    : "";
-
-function publicImagePath(relativePath: string) {
-  return `${publicBasePath}${relativePath}`;
+function publicImagePath(relativePath: string): string {
+  return relativePath.startsWith("/")
+    ? relativePath
+    : `/${relativePath}`;
 }
 
 function driveClient() {
