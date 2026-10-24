@@ -2,6 +2,7 @@ import Link from "next/link";
 import { getActiveCategories } from "@/lib/catalog";
 import { getSiteSettings } from "@/lib/site-settings";
 import "./Footer.css";
+import Image from "next/image";
 
 function digitsOnly(value: string) {
   return value.replace(/[^\d]/g, "");
@@ -17,7 +18,25 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-grid">
         <div>
-          <div className="footer-brand">◆ {businessName}</div>
+          
+<div className="footer-brand">
+  <Image
+    src="/sumuk-sm-logo.png"
+    alt=""
+    width={54}
+    height={54}
+    className="footer-brand-icon"
+  />
+
+  <Image
+    src="/sumuk-gifts-name.png"
+    alt="Sumuk Gifts"
+    width={160}
+    height={54}
+    className="footer-brand-wordmark"
+  />
+</div>
+
           <p>{settings.footerText || settings.aboutShort || settings.tagline || "Thoughtful corporate gifts for meaningful business relationships."}</p>
         </div>
 
