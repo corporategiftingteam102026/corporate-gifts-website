@@ -3,10 +3,10 @@ import { getSiteSettings } from "@/lib/site-settings";
 import "./globals.css";
 
 const settings = getSiteSettings();
-const businessName = settings.businessName || "Corporate Gifts";
+const businessName = "Sumuk Gifts";
 
 export const metadata: Metadata = {
-  title: `${businessName} | Corporate Gifting`,
+  title: "Sumuk Gifts",
   description: settings.aboutShort || settings.tagline || "Thoughtful corporate gifting for teams, clients and celebrations.",
 };
 
