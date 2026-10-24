@@ -21,19 +21,11 @@ export default function Footer() {
           
 <div className="footer-brand">
   <Image
-    src="/sumuk-sm-logo.png"
-    alt=""
-    width={54}
-    height={54}
-    className="footer-brand-icon"
-  />
-
-  <Image
-    src="/sumuk-gifts-name.png"
+    src="/sumuk-gifts-logo.png"
     alt="Sumuk Gifts"
-    width={160}
-    height={54}
-    className="footer-brand-wordmark"
+    width={220}
+    height={75}
+    className="footer-brand-logo"
   />
 </div>
 
