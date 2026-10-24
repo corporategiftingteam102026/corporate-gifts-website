@@ -1,10 +1,7 @@
 import "@/components/home/WhyChooseUs.css";
 import Link from "next/link";
 
-const basePath =
-  process.env.NODE_ENV === "production"
-    ? "/corporate-gifts-website"
-    : "";
+
 
 const reasons = [
   {
@@ -78,7 +75,7 @@ export default function WhyChooseUs() {
               <div className="reason-visual" aria-hidden="true">
                 <span className="reason-image-halo" />
                 <img
-                  src={`${basePath}${reason.image}`}
+                  src={reason.image}
                   alt=""
                   className="reason-image-img"
                 />
