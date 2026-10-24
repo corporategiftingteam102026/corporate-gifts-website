@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getSiteSettings } from "@/lib/site-settings";
 import "./Hero.css";
+import SectionLink from "@/components/layout/SectionLink";
 
 export default function Hero() {
   const settings = getSiteSettings();
@@ -22,7 +23,12 @@ export default function Hero() {
         </div>
 
         <div className="hero-actions">
-          <Link className="primary-button" href="/#products">Explore Gifts <span aria-hidden="true">→</span></Link>
+          <SectionLink
+  className="primary-button"
+  section="products"
+>
+  Explore Gifts <span aria-hidden="true">→</span>
+</SectionLink>
           <Link className="hero-secondary-link" href="/contact/">Plan your gifting</Link>
         </div>
       </div>
