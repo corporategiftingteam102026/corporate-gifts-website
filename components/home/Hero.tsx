@@ -28,7 +28,10 @@ export default function Hero() {
       </div>
 
       <div className="hero-visual" aria-label="Corporate gifting collection">
-        <img src="./images/Warm Corporate Gift Exchange.png" alt="A curated corporate gifting collection with a premium gift box, notebook, bottle, mug and desk clock" />
+        <img
+  src="/images/Warm Corporate Gift Exchange.png"
+  alt="A curated corporate gifting collection with a premium gift box, notebook, bottle, mug and desk clock"
+/>
         {/* <div className="hero-visual-caption">
           <span>Curated for every occasion</span>
           <strong>Welcome kits · Milestones · Client gifts</strong>
