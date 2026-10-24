@@ -32,21 +32,12 @@ export default function Navbar() {
   aria-label="Sumuk Gifts home"
 >
   <Image
-    src="/sumuk-sm-logo.png"
-    alt=""
-    width={64}
-    height={64}
-    priority
-    className="brand-icon"
-  />
-
-  <Image
-    src="/sumuk-gifts-name.png"
+    src="/sumuk-gifts-logo.png"
     alt="Sumuk Gifts"
-    width={180}
-    height={64}
+    width={240}
+    height={80}
     priority
-    className="brand-wordmark"
+    className="brand-logo"
   />
 </Link>
 
