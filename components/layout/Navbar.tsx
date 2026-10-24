@@ -24,21 +24,32 @@ export default function Navbar() {
   return (
     <header className="site-header">
       <div className="nav-shell">
-        <Link
-      className="brand"
-      href="/"
-      onClick={close}
-      aria-label="Sumuk Gifts home"
-    >
-      <Image
-        src="/sumuk-gifts-logo.png"
-        alt="Sumuk Gifts"
-        width={240}
-        height={100}
-        priority
-        className="brand-logo"
-      />
-    </Link>
+        
+<Link
+  className="brand"
+  href="/"
+  onClick={close}
+  aria-label="Sumuk Gifts home"
+>
+  <Image
+    src="/sumuk-sm-logo.png"
+    alt=""
+    width={64}
+    height={64}
+    priority
+    className="brand-icon"
+  />
+
+  <Image
+    src="/sumuk-gifts-name.png"
+    alt="Sumuk Gifts"
+    width={180}
+    height={64}
+    priority
+    className="brand-wordmark"
+  />
+</Link>
+
 
         <nav className="desktop-nav" aria-label="Primary navigation">
           <div className="nav-dropdown">
