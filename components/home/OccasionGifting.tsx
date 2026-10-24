@@ -1,9 +1,6 @@
 import styles from "./OccasionGifting.module.css";
 
-const basePath =
-  process.env.NODE_ENV === "production"
-    ? "/corporate-gifts-website"
-    : "";
+
 
 const occasions = [
   {
@@ -65,7 +62,7 @@ export default function OccasionGifting() {
               <div className={styles.imageWrap}>
                 <img
                   className={styles.image}
-                  src={`${basePath}${occasion.image}`}
+                  src={occasion.image}
                   alt=""
                   loading="lazy"
                 />
