@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { getActiveCategories } from "@/lib/catalog";
 import { getSiteSettings } from "@/lib/site-settings";
 import "./Navbar.css";
@@ -23,13 +24,21 @@ export default function Navbar() {
   return (
     <header className="site-header">
       <div className="nav-shell">
-        <Link className="brand" href="/" onClick={close}>
-          <span className="brand-mark" aria-hidden="true">◆</span>
-          <span className="brand-text">
-            <strong>{businessName}</strong>
-            <small>{brandSubline}</small>
-          </span>
-        </Link>
+        <Link
+      className="brand"
+      href="/"
+      onClick={close}
+      aria-label="Sumuk Gifts home"
+    >
+      <Image
+        src="/sumuk-gifts-logo.png"
+        alt="Sumuk Gifts"
+        width={240}
+        height={100}
+        priority
+        className="brand-logo"
+      />
+    </Link>
 
         <nav className="desktop-nav" aria-label="Primary navigation">
           <div className="nav-dropdown">
