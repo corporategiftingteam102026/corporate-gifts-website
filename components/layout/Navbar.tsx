@@ -6,6 +6,7 @@ import Image from "next/image";
 import { getActiveCategories } from "@/lib/catalog";
 import { getSiteSettings } from "@/lib/site-settings";
 import "./Navbar.css";
+import SectionLink from "@/components/layout/SectionLink";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -61,15 +62,21 @@ export default function Navbar() {
                     <span className="dropdown-link-arrow" aria-hidden="true">→</span>
                   </Link>
                 ))}
-                <Link className="view-all-products" href="/#products">
-                  <span>View all products</span><span aria-hidden="true">→</span>
-                </Link>
+                <SectionLink
+  className="view-all-products"
+  section="products"
+>
+  <span>View all products</span>
+  <span aria-hidden="true">→</span>
+</SectionLink>
               </div>
             </div>
           </div>
 
           <Link href="/about/">About</Link>
-          <Link href="/#faq">FAQ</Link>
+          <SectionLink section="faq">
+  FAQ
+</SectionLink>
         </nav>
 
         <Link className="contact-button desktop-contact" href="/contact/">
@@ -106,14 +113,23 @@ export default function Navbar() {
                   {category.name}<span aria-hidden="true">→</span>
                 </Link>
               ))}
-              <Link className="mobile-all-products" href="/#products" onClick={close}>
-                View all products <span aria-hidden="true">→</span>
-              </Link>
+              <SectionLink
+  className="mobile-all-products"
+  section="products"
+  onClick={close}
+>
+  View all products <span aria-hidden="true">→</span>
+</SectionLink>
             </div>
           )}
 
           <Link href="/about/" onClick={close}>About <span aria-hidden="true">→</span></Link>
-          <Link href="/#faq" onClick={close}>FAQ <span aria-hidden="true">→</span></Link>
+          <SectionLink
+  section="faq"
+  onClick={close}
+>
+  FAQ <span aria-hidden="true">→</span>
+</SectionLink>
           <Link className="mobile-contact-button" href="/contact/" onClick={close}>
             Contact Us <span aria-hidden="true">→</span>
           </Link>
