@@ -5,7 +5,32 @@
 .footer a, .footer p { display: block; margin: 5px 0; color: #f3e6dc; font-size: 12px; line-height: 1.7; }
 .footer a:hover { color: #fff; }
 .footer-about p { max-width: 340px; }
-.footer-brand { margin-bottom: 14px; color: #f2b77d; font: 700 25px Georgia,serif; }
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 18px;
+  line-height: 0;
+}
+
+.footer-brand-icon {
+  display: block;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.footer-brand-wordmark {
+  display: block;
+  width: 160px;
+  height: 54px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+
 .copyright { max-width: 1220px; margin: 35px auto 0; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.13); color: #cbb8ac; font-size: 10px; }
 
 @media (max-width: 760px) {
@@ -16,4 +41,17 @@
 @media (max-width: 420px) {
   .footer-grid { grid-template-columns: 1fr; }
   .footer-about { grid-column: auto; }
+    .footer-brand {
+    gap: 8px;
+  }
+
+  .footer-brand-icon {
+    width: 46px;
+    height: 46px;
+  }
+
+  .footer-brand-wordmark {
+    width: 140px;
+    height: 46px;
+  }
 }
